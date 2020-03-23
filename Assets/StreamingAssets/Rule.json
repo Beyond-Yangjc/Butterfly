@@ -1,0 +1,38 @@
+﻿{
+    "MsgTypes": [
+        "Buff",
+        "创建单位"
+    ],
+    "rules": [
+        {
+            "name": "Buff",
+            "units": [
+                "Buff类型",
+                "单位ID",
+                "BuffID",
+                "E_Buff操作",
+                "E_增减益"
+            ],
+            "describe": "给 单位ID E_Buff操作 了 增减益 BuffID"
+        },
+        {
+            "name": "创建单位",
+            "units": [
+                "单位类型",
+                "位置",
+                "配置ID"
+            ],
+            "describe": "给 单位ID E_Buff操作 了 增减益 BuffID"
+        }
+    ],
+    "enums": [
+        {
+            "name": "E_BuffOp",
+            "enum": [
+                "添加",
+                "移除",
+                "一次性施放"
+            ]
+        }
+    ]
+}
