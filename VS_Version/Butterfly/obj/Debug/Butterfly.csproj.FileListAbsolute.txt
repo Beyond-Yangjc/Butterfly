@@ -1,0 +1,13 @@
+G:\_Projects\VisualStudio\Butterfly\Butterfly\bin\Debug\Butterfly.exe.config
+G:\_Projects\VisualStudio\Butterfly\Butterfly\bin\Debug\Butterfly.exe
+G:\_Projects\VisualStudio\Butterfly\Butterfly\bin\Debug\Butterfly.pdb
+G:\_Projects\VisualStudio\Butterfly\Butterfly\obj\Debug\Butterfly.csprojAssemblyReference.cache
+G:\_Projects\VisualStudio\Butterfly\Butterfly\obj\Debug\Butterfly.Properties.Resources.resources
+G:\_Projects\VisualStudio\Butterfly\Butterfly\obj\Debug\Butterfly.csproj.GenerateResource.cache
+G:\_Projects\VisualStudio\Butterfly\Butterfly\obj\Debug\Butterfly.csproj.CoreCompileInputs.cache
+G:\_Projects\VisualStudio\Butterfly\Butterfly\obj\Debug\Butterfly.exe
+G:\_Projects\VisualStudio\Butterfly\Butterfly\obj\Debug\Butterfly.pdb
+G:\_Projects\VisualStudio\Butterfly\Butterfly\obj\Debug\Butterfly.ButterflyWindow.resources
+G:\_Projects\VisualStudio\Butterfly\Butterfly\bin\Debug\Newtonsoft.Json.dll
+G:\_Projects\VisualStudio\Butterfly\Butterfly\obj\Debug\Butterfly.csproj.CopyComplete
+G:\_Projects\VisualStudio\Butterfly\Butterfly\bin\Debug\Salar.Bois.dll

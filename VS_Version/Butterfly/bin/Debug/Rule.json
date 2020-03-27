@@ -1,0 +1,206 @@
+﻿{
+  "MsgTypes": [
+    "Create_Player",
+    "Create_Entity",
+    "Move_Entity",
+    "Lock_Target",
+    "Entity_Attack",
+    "Entity_GetHit",
+    "BuffAction",
+    "Entity_Dead",
+    "Cancel_Bev",
+    "Sync_PlayerHP",
+    "Sync_Property",
+	"Confirm_OP"
+  ],
+  "rules": [
+    {
+      "name": "Create_Player",
+      "units": [
+        "id",
+        "totalHP",
+        "camp",
+        "direction"
+      ],
+      "describe": "创建玩家 [id], 总血量为：[totalHP] ,阵营：[camp], 方向：[direction]。"
+    },
+    {
+      "name": "Create_Entity",
+      "units": [
+        "id",
+        "armyId",
+        "tableId",
+        "totalHp",
+        "Hp",
+        "playerId",
+        "posX",
+        "posY",
+        "type",
+        "direction",
+        "totalEnergy",
+        "curEnergy"
+      ],
+      "describe": "在格子位置（[posX],[posY]）处, 创建表格ID为：[tableId] 的 [type] 实体单位 [id], 隶属于军团：[armyId], 血量为：[Hp]/[totalHP], 能量为：[curEnergy]/[totalEnergy], 方向：[direction]。"
+    },
+    {
+      "name": "Move_Entity",
+      "units": [
+        "time",
+        "playerId",
+        "camp",
+        "dir",
+        "id",
+        "type",
+        "value",
+        "targetId", 
+        "targetCamp",
+        "PosX",
+        "PosY",
+        "TargetX",
+        "TargetY",
+        "NewDir"
+      ],
+      "describe": "隶属于 [playerId] 的角色 [id], 由格子位置（[PosX],[PosY]） 移动到格子位置 （[TargetX], [TargetY]）。"  
+    },
+    {
+      "name": "Lock_Target",
+      "units": [
+        "ids",
+        "targetIds"
+      ],
+      "describe": "[ids] 对 [targetIds] 进行锁敌。"
+    },
+    {
+      "name": "Entity_Attack",
+      "units": [
+        "id",
+        "skillId",
+        "missionType",
+        "prepareTime",
+        "E_Crit",
+        "targetIds",
+        "times",
+        "exSpeed",
+        "exType",
+        "exArg",
+        "exArg1"
+      ],
+      "describe": "实体单位 [id] 对 [targetIds] 施放了技能 [skillId], 造成了 [E_Crit] 伤害。持续时间：[times], 攻速变化：[exSpeed], 附加参数类型：[exType]，附加参数[exArg][exArg1]"
+    },
+    {
+      "name": "Entity_GetHit",
+      "units": [
+        "id",
+        "skillId",
+        "targetId",
+        "power",
+        "E_atkTag"
+      ],
+      "describe": "实体单位 [targetId] 受到来自其他实体单位 [id] 技能 [skillId] 的 [power] 伤害,伤害类型为：[E_atkTag]。"
+    },
+    {
+      "name": "BuffAction",
+      "units": [
+        "id",
+		"tableId",
+        "buffId",
+        "E_BuffOp",
+        "E_BuffEft", 
+        "BuffType"
+      ],
+      "describe": "实体单位 [id] 给编号为 [tableId] 的另一实体单位 [E_BuffOp] 了 [E_BuffEft] BuffID为：[buffId] 的buff，夹带的基础效果类型有：[BuffType]。"
+    },
+    {
+      "name": "Entity_Dead",
+      "units": [
+        "id",
+        "atkId",
+        "skillId",
+        "time"
+      ],
+      "describe": "实体单位 [atkId] 使用技能 [skillId] 击杀了实体单位 [id]。"
+    },
+    {
+      "name": "Cancel_Bev",
+      "units": [
+        "id"
+      ],
+      "describe": "实体单位 [id] 取消了当前行为。"
+    },
+    {
+      "name": "Sync_PlayerHP",
+      "units": [
+        "atkTotalHp",
+        "atkCurHp",
+        "defTotalHp",
+        "defCurHp"
+      ],
+      "describe": "同步：进攻玩家血量：[atkCurHp]/[atkTotalHp], 防守玩家血量：[defCurHp]/[defTotalHp]。"
+    },
+    {
+      "name": "Sync_Property",
+      "units": [
+        "id",
+        "type",
+        "value"
+      ],
+      "describe": "为实体单位 [id] 同步类型为 [type] 的属性，值为：[value]。"
+    },
+    {
+      "name": "Confirm_OP",
+      "units": [
+        "id",
+        "E_OpType",
+        "E_Error"
+      ],
+      "describe": "确认释放 [E_OpType] 操作, 结果为 [E_Error]"
+    }
+  ],
+  "enums": [
+    {
+      "name": "E_BuffOp",
+      "enum": [
+        "添加",
+        "移除",
+        "一次性施放"
+      ]
+    },
+    {
+      "name": "E_BuffEft",
+      "enum": [
+        "增益类",
+        "减益类"
+      ]
+    },
+    {
+      "name": "E_Crit",
+      "enum": [
+        "普通",
+        "暴击"
+      ]
+    },
+    {
+      "name": "E_atkTag",
+      "enum": [
+        "普攻",
+        "技能",
+        "暴击",
+        "不显示"
+      ]
+    },
+    {
+      "name": "E_OpType",
+      "enum": [
+        "魔法",
+        "英雄"
+      ]
+    },
+    {
+      "name": "E_Error",
+      "enum": [
+        "正确",
+        "错误"
+      ]
+    }
+  ]
+}
