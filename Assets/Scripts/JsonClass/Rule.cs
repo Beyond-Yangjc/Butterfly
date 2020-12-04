@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace ByYoung.Services
+namespace ByYoung.Butterfly
 {
    public sealed class Rule
     {
@@ -28,6 +28,6 @@ namespace ByYoung.Services
     {
         public string name;
         public List<string> units = new List<string>();
-        public string desctipt;//描述
+        public string describe;//描述
     } 
 }
