@@ -16,7 +16,7 @@ public class StartUp : MonoBehaviour
 
     void Start()
     {
-        _rec = new BattleREC(Application.streamingAssetsPath + "/111.json");
+        _rec = new BattleREC(Application.streamingAssetsPath + "/Rule.json");
 
         Test();
 
